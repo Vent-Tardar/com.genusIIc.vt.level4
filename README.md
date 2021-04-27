@@ -6,7 +6,7 @@ This program compares the original file with the modified one. In order for the 
 
 * Build the program using gradle dist;
 * Call the program using java -jar <filename .jar> <parameters>, where the parameters are the filenames*;
-* To test the program, run the program: gradle test.
+* To test the program, run the program: *gradle test*.
 
 **If the file is located elsewhere, specify the full path to it. For example: C:\\Users\\User\\Documents\\test\\test1.txt*
 
