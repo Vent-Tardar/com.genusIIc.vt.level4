@@ -1,7 +1,6 @@
 package com.genusIIc.vt;
 
 import org.apache.logging.log4j.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,11 +11,8 @@ public class Main {
             logger.error("Parameters entered incorrectly");
         } else {
             ComparisonDoc cd = new ComparisonDoc();
-            //cd.compare(args[0], args[1]);
-
             List lst = new ArrayList();
             lst = cd.compare(args[0], args[1]);
-
             for (Object s : lst) {
                 System.out.println(s);
             }

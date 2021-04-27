@@ -3,7 +3,6 @@ package com.genusIIc.vt;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.logging.log4j.*;
 
 public class ComparisonDoc {
@@ -23,7 +22,7 @@ public class ComparisonDoc {
     public List compare(String org, String mdf){
         checkingFiles(org, mdf);
 
-        List list = new ArrayList();
+        List<String> list = new ArrayList<>();
 
         try(BufferedReader br_1 = new BufferedReader(new FileReader(org));
             BufferedReader br_2 = new BufferedReader(new FileReader(mdf))){
