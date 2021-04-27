@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.genusIIc.vt.ComparisonDocTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-27T10:21:34" hostname="GENUS-E540" time="0.581">
-  <properties/>
-  <testcase name="compareTest()" classname="com.genusIIc.vt.ComparisonDocTest" time="0.581"/>
-  <system-out><![CDATA[The test was successful. No errors were detected.
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

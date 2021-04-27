@@ -1,4 +1,0 @@
-com/genusIIc/vt/ComparisonDoc.java
- com.genusIIc.vt.ComparisonDoc
-com/genusIIc/vt/Main.java
- com.genusIIc.vt.Main
