@@ -38,43 +38,57 @@ public class ComparisonDocTest {
         }
     }
 
-   @Test
-   @Timeout(4)
-   public void compareSmallTest(){
-       File test_file_1 = new File(classLoader.getResource("smallTest_1.txt").getFile());
-       String absolutePath_1 = test_file_1.getAbsolutePath();
-       File test_file_2 = new File(classLoader.getResource("smallTest_2.txt").getFile());
-       String absolutePath_2 = test_file_2.getAbsolutePath();
-       ComparisonDoc cd = new ComparisonDoc();
-       List lst = new ArrayList();
-       lst = cd.compare(absolutePath_1, absolutePath_2);
-       assertEquals(2, lst.size());
-   }
+    @Test
+    @Timeout(4)
+    public void compareSmallTest(){
+        File test_file_1 = new File(classLoader.getResource("smallTest_1.txt").getFile());
+        String absolutePath_1 = test_file_1.getAbsolutePath();
+        File test_file_2 = new File(classLoader.getResource("smallTest_2.txt").getFile());
+        String absolutePath_2 = test_file_2.getAbsolutePath();
+        ComparisonDoc cd = new ComparisonDoc();
+        List<String> lst = new ArrayList<String>();
+        lst = cd.compare(absolutePath_1, absolutePath_2);
+        assertEquals(2, lst.size());
+    }
 
-   @Test
-   @Timeout(6)
-   public void compareMediumTest(){
-       File test_file_1 = new File(classLoader.getResource("test1.txt").getFile());
-       String absolutePath_1 = test_file_1.getAbsolutePath();
-       File test_file_2 = new File(classLoader.getResource("test2.txt").getFile());
-       String absolutePath_2 = test_file_2.getAbsolutePath();
-       ComparisonDoc cd = new ComparisonDoc();
-       List lst = new ArrayList();
-       lst = cd.compare(absolutePath_1, absolutePath_2);
-       assertEquals(8, lst.size());
-   }
+    @Test
+    @Timeout(6)
+    public void compareMediumTest(){
+        File test_file_1 = new File(classLoader.getResource("test1.txt").getFile());
+        String absolutePath_1 = test_file_1.getAbsolutePath();
+        File test_file_2 = new File(classLoader.getResource("test2.txt").getFile());
+        String absolutePath_2 = test_file_2.getAbsolutePath();
+        ComparisonDoc cd = new ComparisonDoc();
+        List<String> lst = new ArrayList<String>();
+        lst = cd.compare(absolutePath_1, absolutePath_2);
+        assertEquals(8, lst.size());
+    }
 
-   @Test
-   @Timeout(6)
-   public void compareBigTest(){
-       File test_file_1 = new File(classLoader.getResource("bigTest_1.txt").getFile());
-       String absolutePath_1 = test_file_1.getAbsolutePath();
-       File test_file_2 = new File(classLoader.getResource("bigTest_2.txt").getFile());
-       String absolutePath_2 = test_file_2.getAbsolutePath();
-       ComparisonDoc cd = new ComparisonDoc();
-       List lst = new ArrayList();
-       lst = cd.compare(absolutePath_1, absolutePath_2);
-       assertEquals(6, lst.size());
-   }
+    @Test
+    @Timeout(6)
+    public void compareBigTest(){
+        File test_file_1 = new File(classLoader.getResource("bigTest_1.txt").getFile());
+        String absolutePath_1 = test_file_1.getAbsolutePath();
+        File test_file_2 = new File(classLoader.getResource("bigTest_2.txt").getFile());
+        String absolutePath_2 = test_file_2.getAbsolutePath();
+        ComparisonDoc cd = new ComparisonDoc();
+        List<String> lst = new ArrayList<>();
+        lst = cd.compare(absolutePath_1, absolutePath_2);
+        assertEquals(6, lst.size());
+    }
+
+    @Test
+     public void checkingParametersTest() throws ArrayIndexOutOfBoundsException{
+        List<String> test_1 = new ArrayList<String>();
+        test_1.add("bigTest_1.txt");
+        test_1.add("bigTest_1.txt");
+        test_1.add("bigTest_1.txt");
+        if ((test_1.size() > 2)|| (test_1.size() < 2)){
+            Throwable thrown = assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
+                throw new ArrayIndexOutOfBoundsException("Many/few parameters");
+            });
+            assertNotNull(thrown.getMessage());
+        }
+    }
 
 }
