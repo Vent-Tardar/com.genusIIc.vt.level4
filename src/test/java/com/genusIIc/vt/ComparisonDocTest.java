@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Timeout;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
