@@ -6,7 +6,7 @@ import java.util.List;
 import org.apache.logging.log4j.*;
 
 public class ComparisonDoc {
-    private static final Logger logger = LogManager.getLogger(Main.class);
+    private static final Logger logger = LogManager.getLogger(ComparisonDoc.class);
     private void checkingFiles(String org, String mdf) {
         if(!(new File(org).exists() && new File(mdf).exists())) {
             System.out.println();
@@ -19,7 +19,7 @@ public class ComparisonDoc {
         }
     }
 
-    public List compare(String org, String mdf){
+    public <T> List<String> compare(String org, String mdf){
         checkingFiles(org, mdf);
 
         List<String> list = new ArrayList<>();

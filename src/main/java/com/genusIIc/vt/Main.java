@@ -11,9 +11,9 @@ public class Main {
             logger.error("Parameters entered incorrectly");
         } else {
             ComparisonDoc cd = new ComparisonDoc();
-            List lst = new ArrayList();
+            List<String> lst = new ArrayList();
             lst = cd.compare(args[0], args[1]);
-            for (Object s : lst) {
+            for (String s : lst) {
                 System.out.println(s);
             }
         }
