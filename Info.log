@@ -1,0 +1,4 @@
+2021-04-28 10:01:43.273 [main] ERROR com.genusIIc.vt.ComparisonDoc - The same file was entered in the parameters
+2021-04-28 10:01:43.278 [main] INFO  com.genusIIc.vt.ComparisonDoc - File comparison started.
+2021-04-28 10:01:43.278 [main] INFO  com.genusIIc.vt.ComparisonDoc - Files are being compared.
+2021-04-28 10:01:43.279 [main] INFO  com.genusIIc.vt.ComparisonDoc - File comparison ended.
