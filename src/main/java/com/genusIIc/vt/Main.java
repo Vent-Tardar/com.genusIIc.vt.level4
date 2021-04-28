@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         if ((args.length > 2) || (args.length < 2)){
             logger.error("Parameters entered incorrectly");
         } else {
